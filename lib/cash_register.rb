@@ -1,7 +1,12 @@
+<<<<<<< HEAD
 require 'pry'
 
 class CashRegister
 
+=======
+class CashRegister
+
+>>>>>>> 1c5d38cd042e0d276827df6b6f952980efb935c1
   attr_accessor :total, :last_trans
   attr_reader :discount
   
@@ -13,10 +18,17 @@ class CashRegister
 
   def add_item(title, price, qty = 1)
     self.total += (price * qty)
+<<<<<<< HEAD
     self.last_trans = (price * qty)
     while qty > 0 
       @items << title
       qty -= 1
+=======
+    self.last_trans = self.total
+    while qty > 0 
+      @items << title
+      qty -= 1 
+>>>>>>> 1c5d38cd042e0d276827df6b6f952980efb935c1
     end
   end
  
@@ -33,7 +45,11 @@ class CashRegister
  end
  
  def void_last_transaction
+<<<<<<< HEAD
   self.total -= self.last_trans
+=======
+   
+>>>>>>> 1c5d38cd042e0d276827df6b6f952980efb935c1
  end
  
 end
